@@ -1,0 +1,14 @@
+{
+	"Test": "Variable",
+	"NumTest": 12,
+	"BoolTest": true,
+	"ObjTest": {
+		"Name": "Jake",
+		"Age": 21
+	},
+	"ArrTest": [
+		"one",
+		"two",
+		"three"
+	]
+}
