@@ -6,17 +6,16 @@ Drexel University
 Summer 2021
 
 ## NAME
-    jtox - JSON to XML converter
+    jsonpretty - JSON Pretty Printer
 ## SYNOPSIS
-    jtox [FILE]...
+    jsonpretty [FILE]...
 ## DESCRIPTION
-    Convert prettified JSON to XML. The top-level element is labeled
-    "root" and items in an array are labeled "item"
+    Print valid JSON in a pretty format.
 ### Exit Status:
         0 if OK,
         1 if error. 
 ## BUILD
-    Run make. Outputs jtox in the current directory.
+    Run make. Outputs jsonpretty in the current directory.
 ## Copyright
     Copyright © 2021 Jacob Williamson. License GPLv3:
        GNU GPL version 3 <https://gnu.org/licenses/gpl.html>.

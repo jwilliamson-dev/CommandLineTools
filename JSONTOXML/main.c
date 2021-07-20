@@ -27,20 +27,28 @@ main(int argc, char *argv[])
 	FILE *fp;
 	struct DataNode *root;
 	int i;
-
-	for(i = 1; i < argc; i++)
+	if(argc > 1)
 	{
-		if(fp = fopen(argv[i], "r"))
+		for(i = 1; i < argc; i++)
 		{
-			root = loadJson(fp);
-			fclose(fp);
-			XmlPrintObj(root, 0);
-			free(root);
+			if(fp = fopen(argv[i], "r"))
+			{
+				root = loadJson(fp);
+				fclose(fp);
+				XmlPrintObj(root, 0);
+				free(root);
+			}
+			else
+			{
+				fprintf(stderr, "Unable to open %s. Skipping file.\n", argv[i]);
+			}
 		}
-		else
-		{
-			fprintf(stderr, "Unable to open %s. Skipping file.\n", argv[i]);
-		}
+	}
+	else
+	{
+		root = loadJson(stdin);
+		XmlPrintObj(root, 0);
+		free(root);
 	}
 
 	return 0;

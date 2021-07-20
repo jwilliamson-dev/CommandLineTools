@@ -130,7 +130,8 @@ getDataType(char *data)
  * 
  * returns: void
  */
-void indent(int n)
+void 
+indent(int n)
 {
     int i;
 
